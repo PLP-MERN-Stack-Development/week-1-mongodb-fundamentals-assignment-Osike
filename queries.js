@@ -25,7 +25,7 @@ async function run() {
     }
 }
 
-// Function to perform CRUD operations
+// Function to perform CRUD operations -task2
 async function runCrudOperations(books) {
     console.log("=== CRUD Operations ===");
 
@@ -33,7 +33,7 @@ async function runCrudOperations(books) {
     const bookDocuments = [
         { title: "To Kill a Mockingbird", author: "Harper Lee", genre: "Fiction", published_year: 1960, price: 12.99, in_stock: true, pages: 336, publisher: "J. B. Lippincott & Co." },
         { title: "1984", author: "George Orwell", genre: "Dystopian", published_year: 1949, price: 10.99, in_stock: true, pages: 328, publisher: "Secker & Warburg" },
-        // Add more books as needed...
+        
     ];
 
     // Check if collection already has documents
@@ -67,7 +67,7 @@ async function runCrudOperations(books) {
     console.log("Deleted 'Moby Dick' from the collection.");
 }
 
-// Function to perform advanced queries
+// Function to perform advanced queries -task3
 async function runAdvancedQueries(books) {
     console.log("=== Advanced Queries ===");
 
@@ -87,13 +87,13 @@ async function runAdvancedQueries(books) {
     console.log("Books Sorted by Price Descending:", sortedDesc);
 
     // Pagination (5 books per page)
-    const page = 0; // Change for different pages
+    const page = 0; 
     const pageSize = 5;
     const paginatedBooks = await books.find().skip(page * pageSize).limit(pageSize).toArray();
     console.log("Paginated Books:", paginatedBooks);
 }
 
-// Function to run aggregation pipelines
+// Function to run aggregation pipelines -task4
 async function runAggregationPipelines(books) {
     console.log("=== Aggregation Pipelines ===");
 
@@ -123,7 +123,7 @@ async function runAggregationPipelines(books) {
     console.log("Books by Publication Decade:", booksByDecade);
 }
 
-// Function to create indexes
+// Function to create indexes -task5
 async function runIndexing(books) {
     console.log("=== Indexing ===");
 
